@@ -1,0 +1,12 @@
+#image {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#img-caption,
+#title {
+  margin: 5px;
+  text-align: center;
+}
