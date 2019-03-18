@@ -1,0 +1,2 @@
+# FreeCodeCamp-Projects
+Applied learning
