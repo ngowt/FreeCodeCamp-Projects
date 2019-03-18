@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<HTML>
+  <head>
+    <title>FCC: Book Survey Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+      <div>
+        <h1 id="title">Book Survey</h1>
+        <p id="description">A Survey Regarding Books</p>
+      <div>
+      <div>
+        <form id="survey-form">
+            <div class="container-col">
+              <h2>Personal Information</h2>
+              <label class="question" for="firstname">First Name </label>
+              <input id="firstname" type="text" placeholder="John" required/>
+              <label class="question" for="lastname">Last Name </label>
+              <input id="lastname" type="text" placeholder="Smith" required/>
+              <label class="question" for="email">Email </label>
+              <input id="email" placeholder="johnsmith@gmail.com" type="email" required/>
+              <label class="question" id="number-label" for="number">Age </label>
+              <input id="number" class="small" type="number" placeholder="26" min="0" max="200"/>
+            </div>
+            <div class="container-col">
+              <h2>Book Questionnaire</h2>
+              <label id="dropdown-label" class="question" for="dropdown">How many books do you own?</label>
+              <select id="dropdown" class="small">
+                <option value="0to10">0 - 10</option>
+                <option value="11to20">11 - 20</option>
+                <option value="20to30">21 - 30</option>
+                <option value="over30">30+</option>
+              </select>
+              <div class="container-inl">
+                <label class="question" for="radiog1">How many books do you read per month?</label>
+                <input class="flex-item" type="radio" name="radio1g" value="lessthan1" />
+                <p class="two-option">Less than one per month</p>
+                <input class="flex-item" type="radio" name="radio1g" value="approx1" />
+                <p class="two-option">Once per month approximately</p>
+              </div>
+              <div class="container-inl">
+                  <input class="flex-item" type="radio" name="radio1g" value="1perweek">
+                  <p class="two-option">Once per week</p>
+                </input>
+                <input class="flex-item" type="radio" name="radio1g" value="2perweek">
+                  <p class="two-option">More than twice per week</p>
+                </input>   
+              </div>
+            </div>
+            <div class="container-col">
+              <div class="container-inl">
+                <label for="radiog2" class="question" >What format are you reading books?</label>
+                <input class="flex-item" type="radio" name="radio2g" value="Paperback">
+                  <p class="two-option">Paperback</p>
+                </input>
+                <input class="flex-item" type="radio" name="radio2g" value="E-Book">
+                  <p class="two-option">E-Book</p>
+                </input>
+              </div>
+              <div class="container-inl">
+                <input class="flex-item" type="radio" name="radio2g" value="Audio">
+                  <p class="two-option">Both</p>
+                </input>
+                <input class="flex-item" type="radio" name="radio2g" value="Other">
+                  <p class="two-option">Other</p>
+                </input>
+              </div>
+            </div>
+            <div class="container-col">
+              <div class="container-inl">
+                <label for="radiog3" class="question" >What genres of fiction do you like to read?</label>
+                <input class="flex-item" type="checkbox" value="Fantasy">
+                  <p class="three-option">Classic</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Western">
+                  <p class="three-option">Comics/Graphic Novel</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Romance">
+                  <p class="three-option">Crime/Detective</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Thriller">
+                  <p class="three-option">Fable</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Fairy tale</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Fan fiction</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Fantasy</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Horror</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Mythology</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Picture book</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Science fiction</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Short story</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Thriller</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Tall tale</p>
+                </input>
+                <input class="flex-item" type="checkbox" value="Mystery">
+                  <p class="three-option">Western</p>
+                </input>
+              </div>
+            </div>
+          <div class="container-inl">
+            <label for="comments" class="question" >Additional Comments</label>
+            <textarea id="comments"></textarea>
+          </div>
+        
+          
+        <input id="submit" type="submit" />
+      </form>
+      </div>
+  </body>
+</HTML>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->

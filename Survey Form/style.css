@@ -1,0 +1,122 @@
+body {
+    background-color: #50514F;
+  }
+  
+  .container-col {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  
+  .container-inl {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  
+  h1 {
+    font-family: Impact;
+    font-size: 48px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    color: #2AFC98;
+  }
+  
+  #description {
+    font-family: Impact;
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    color: #FDFFF7;
+  }
+  
+  h2 {
+    font-family: Impact;
+    font-size: 36px;
+    padding: 10px 0px 10px 0px;
+    margin: auto;
+    color: #FFED65;
+  }
+  
+  label {
+    font-family: Impact;
+    font-size: 24px;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  select {
+    color: #B4ADEA;
+  }
+  
+  option {
+    color: #B4ADEA;
+  }
+  
+  .question {
+    width: 100%;
+    color: #2AFC98;
+  }
+  
+  input {
+    font-family: Impact;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  textarea {
+    font-family: Impact;
+    font-size: 16px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 0px; 10px 0px;
+    height: 300px;
+    width: 100%;
+  }
+  
+  [type="text"], [type="email"], [type="number"] {
+    color: #B4ADEA;
+  }
+  
+  [type="submit"] {
+    background-color: #FFED65;
+    border-color: #FFED65;
+    color: #B4ADEA;
+  }
+  
+  select {
+    font-family: Impact;
+    font-size: 24px;
+    padding: 10px;
+  }
+  
+  [type="radio"], [type="checkbox"] {
+    align-self: center;
+  }
+  
+  .flex-item {
+    margin: 0 10px; 0 10px;
+  }
+  
+  .two-option {
+    font-family: Impact;
+    font-size: 20px;
+    width: 40%;
+    color: #B4ADEA;
+  }
+  
+  .three-option {
+    font-family: Impact;
+    font-size: 20px;
+    width: 30%;
+    color: #B4ADEA
+  }
+  
+  .small {
+    max-width: 100px;
+  }
+  
+  .medium {
+    max-width: 200px;
+  }
+  
+  .large {
+    max-width: 300px;
+  }
