@@ -1,0 +1,98 @@
+.colors {
+  color: #87bcde;
+  color: #805e73;
+  color: #2ba84a;
+  color: #efe9f4;
+  color: #484d6d;
+}
+
+html,
+body {
+  font-family: "Berkshire Swash", cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.nav__div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.flexitem {
+  margin: 4px;
+}
+
+nav {
+  background-color: #805e73;
+  padding: 8px;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+}
+
+.nav__a {
+  font-size: 48px;
+  color: #efe9f4;
+  margin: 4px 8px 4px 8px;
+  cursor: pointer;
+}
+
+.nav__a:hover {
+  color: #484d6d;
+}
+
+.firstFlexItem {
+  margin-right: auto;
+}
+
+#welcome-section {
+  background-color: #484d6d;
+  padding-top: 84px;
+  color: #efe9f4;
+}
+
+.welcome__div {
+  padding-top: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilepicture__img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+
+.profilename__h2 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.positions__h2 {
+  letter-spacing: 2px;
+}
+
+.socialmedia__div {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding-bottom: 28px;
+}
+
+.icon__img {
+  margin: 4px;
+}
