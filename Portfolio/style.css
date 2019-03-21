@@ -165,3 +165,24 @@ nav {
   flex: 1 1 auto;
   text-align: center;
 }
+
+#contact-section {
+  background-color: #484d6d;
+  padding-top: 32px;
+  color: #efe9f4;
+}
+
+.contact__div {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contact__h2 {
+  letter-spacing: 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.contact-form__div {
+}
