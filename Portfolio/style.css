@@ -204,6 +204,7 @@ nav {
   padding: 8px;
   border-radius: 4px;
   background-color: #efe9f4;
+  font-family: inherit;
 }
 
 .contact-form__submit {
