@@ -12,10 +12,18 @@
   <body>
     <nav id="navbar">
       <div class="nav__div">
-        <a class="nav__a flexitem large-text first-flex-item">Home</a>
-        <a class="nav__a flexitem large-text">Portfolio</a>
-        <a class="nav__a flexitem large-text">About</a>
-        <a class="nav__a flexitem large-text">Contact</a>
+        <a
+          class="nav__a flexitem large-text first-flex-item"
+          href="#welcome-section"
+          >Home</a
+        >
+        <a class="nav__a flexitem large-text" href="#project__section"
+          >Portfolio</a
+        >
+        <a class="nav__a flexitem large-text" href="#welcome-section">About</a>
+        <a class="nav__a flexitem large-text" href="#contact-section"
+          >Contact</a
+        >
       </div>
     </nav>
     <section id="welcome-section">
@@ -86,7 +94,7 @@
                 </a>
               </div>
             </div>
-            <div class="project-caption__text medium-text">
+            <div class="project-caption__text medium-large-text">
               <p>VRDuckHunt</p>
             </div>
           </div>
@@ -109,7 +117,7 @@
                 </a>
               </div>
             </div>
-            <div class="project-caption__text medium-text">
+            <div class="project-caption__text medium-large-text">
               <p>gatcha-simulator</p>
             </div>
           </div>
@@ -129,7 +137,7 @@
                 </a>
               </div>
             </div>
-            <div class="project-caption__text medium-text">
+            <div class="project-caption__text medium-large-text">
               <p>playerbase</p>
             </div>
           </div>
@@ -149,7 +157,7 @@
                 </a>
               </div>
             </div>
-            <div class="project-caption__text medium-text">
+            <div class="project-caption__text medium-large-text">
               <p>Product Landing Page</p>
             </div>
           </div>
@@ -162,16 +170,48 @@
           <h2 class="contact__h2 x-large-text">Contact Me</h2>
           <hr />
         </div>
-        <div class="contact-form__div column">
-          <label>Name</label>
-          <input type="text" placeholder="John Smith" />
-          <label>Email Address</label>
-          <input type="email" placeholder="johnsmith@gmail.com" />
-          <label>Phone Number</label>
-          <input type="tel" placeholder="(647) 123-4567" />
-          <label>Message</label>
-          <textarea placeholder="Describe yourself here..."></textarea>
-        </div>
+        <form>
+          <div class="contact-form__div column">
+            <label for="name__input" class="contact-form__label medium-text"
+              >Name</label
+            >
+            <input
+              id="name__input"
+              class="contact-form__input medium-text"
+              type="text"
+              placeholder="John Smith"
+            />
+            <label for="email__input" class="contact-form__label medium-text"
+              >Email Address</label
+            >
+            <input
+              id="email__input"
+              class="contact-form__input medium-text"
+              type="email"
+              placeholder="johnsmith@gmail.com"
+            />
+            <label for="tel__input" class="contact-form__label medium-text"
+              >Phone Number</label
+            >
+            <input
+              id="tel__input"
+              class="contact-form__input medium-text"
+              type="tel"
+              placeholder="(647) 123-4567"
+            />
+            <label
+              for="message__textarea"
+              class="contact-form__label medium-text"
+              >Message</label
+            >
+            <textarea
+              id="message__textarea"
+              placeholder="Dear Wilton...,"
+              rows="6"
+            ></textarea>
+            <input class="contact-form__submit" type="submit" />
+          </div>
+        </form>
       </div>
     </section>
     <footer>
