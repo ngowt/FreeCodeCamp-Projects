@@ -1,0 +1,42 @@
+.colors {
+    color: #092327;
+    color: #72DDF7;
+    color: #00A9A5;
+}
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Amatic SC', cursive;
+    background-color: #4E8098;
+}
+
+#quote-box {
+    background-color: #72DDF7;
+    margin-top: 64px;
+}
+
+#text {
+    font-size: 40px;
+    padding: 32px 32px 0px 32px;
+    text-align: center;
+    color: #092327;
+}
+
+.quote__img {
+    padding: 0px 16px 0px 16px;
+}
+
+#author {
+    font-size: 32px;
+    padding-right: 32px;
+    text-align: right;
+    color: #092327;
+}
+
+#quote__btn {
+    margin: 16px auto 16px auto;
+    padding: 16px;
+    font-size: 32px;
+}
