@@ -1,6 +1,7 @@
 import React from "react";
 import { QuoteBlock } from "./QuoteBlock";
 import { Quotes } from "../services/Quotes";
+import { animateCSS } from "../animations/Animations";
 
 export class App extends React.Component {
   constructor(props) {
@@ -17,14 +18,24 @@ export class App extends React.Component {
     this.setState({
       quotes: await Quotes
     });
+    animateCSS("#text", "slideInLeft");
+    animateCSS("#author", "slideInRight");
+  };
+
+  componentDidUpdate = () => {
+    animateCSS("#text", "slideInLeft");
+    animateCSS("#author", "slideInRight");
   };
 
   newQuoteHandler = () => {
     const rand = Math.floor(Math.random() * this.state.quotes.length);
     const { quote, author } = this.state.quotes[rand];
-    this.setState({
-      quote,
-      author
+    animateCSS("#text", "slideOutRight");
+    animateCSS("#author", "slideOutLeft", () => {
+      this.setState({
+        quote,
+        author
+      });
     });
   };
 
