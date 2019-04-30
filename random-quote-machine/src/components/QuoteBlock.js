@@ -24,7 +24,7 @@ export const QuoteBlock = props => {
         <button
           id="quote__btn"
           className="btn btn-dark"
-          onClick={props.quoteClickEvent}
+          onClick={props.newQuoteEvent}
         >
           New Quote
         </button>
