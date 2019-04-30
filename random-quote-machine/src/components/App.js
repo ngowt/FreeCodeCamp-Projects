@@ -1,5 +1,6 @@
 import React from "react";
 import { QuoteBlock } from "./QuoteBlock";
+import { Quotes } from "../services/Quotes";
 
 export class App extends React.Component {
   constructor(props) {
@@ -7,15 +8,23 @@ export class App extends React.Component {
     this.state = {
       quote:
         "Justice is subject to dispute; might is easily recognized and is not disputed. So we cannot give might to justice, because might has gainsaid justice, and has declared that it is she herself who is just. And thus being unable to make what is just strong, we have made what is strong just.",
-      author: "Blaise Pascal"
+      author: "Blaise Pascal",
+      quotes: []
     };
   }
 
-  quoteClickHandler = () => {
+  componentDidMount = async () => {
     this.setState({
-      quote:
-        "He who fights with monsters should look to it that he himself does not become a monster. And if you gaze long into an abyss, the abyss also gazes into you.",
-      author: "Friedrich Nietzsche"
+      quotes: await Quotes
+    });
+  };
+
+  newQuoteHandler = () => {
+    const rand = Math.floor(Math.random() * this.state.quotes.length);
+    const { quote, author } = this.state.quotes[rand];
+    this.setState({
+      quote,
+      author
     });
   };
 
@@ -25,7 +34,7 @@ export class App extends React.Component {
         <QuoteBlock
           quote={this.state.quote}
           author={this.state.author}
-          quoteClickEvent={this.quoteClickHandler}
+          newQuoteEvent={this.newQuoteHandler}
         />
       </div>
     );
