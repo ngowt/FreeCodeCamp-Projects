@@ -18,20 +18,20 @@ export class App extends React.Component {
     this.setState({
       quotes: await Quotes
     });
-    animateCSS("#text", "slideInLeft");
-    animateCSS("#author", "slideInRight");
+    animateCSS("#text", "fadeInLeft");
+    animateCSS("#author", "fadeInRight");
   };
 
   componentDidUpdate = () => {
-    animateCSS("#text", "slideInLeft");
-    animateCSS("#author", "slideInRight");
+    animateCSS("#text", "fadeInLeft");
+    animateCSS("#author", "fadeInRight");
   };
 
   newQuoteHandler = () => {
     const rand = Math.floor(Math.random() * this.state.quotes.length);
     const { quote, author } = this.state.quotes[rand];
-    animateCSS("#text", "slideOutRight");
-    animateCSS("#author", "slideOutLeft", () => {
+    animateCSS("#text", "fadeOutRight");
+    animateCSS("#author", "fadeOutLeft", () => {
       this.setState({
         quote,
         author
