@@ -149,12 +149,12 @@ export class Calculator extends React.Component {
 
   render = () => {
     return (
-      <div className="container">
+      <div className="container background">
         <div className="row">
           <div className="col-5 calculator__display-div">
             <input
               type="text"
-              className="form-control"
+              className="form-control calculator__display-input"
               value={this.state.display}
               readOnly
             />
