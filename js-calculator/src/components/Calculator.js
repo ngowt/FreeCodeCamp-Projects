@@ -50,10 +50,12 @@ export class Calculator extends React.Component {
       <div>
         <div className="row">
           <CalculatorButton
+            key={`calculator__btn-${Object.keys(operations[0])}`}
             val={operations[0].del}
             onPress={this.deleteHandler}
           />
           <CalculatorButton
+            key={`calculator__btn-${Object.keys(operations[1])}`}
             val={operations[1].ac}
             onPress={this.clearHandler}
           />
@@ -61,6 +63,7 @@ export class Calculator extends React.Component {
         <div className="row">
           {r2.map(op => (
             <CalculatorButton
+              key={`calculator__btn-${Object.keys(op)}`}
               val={Object.values(op)[0]}
               onPress={this.updateDisplayHandler}
             />
@@ -69,6 +72,7 @@ export class Calculator extends React.Component {
         <div className="row">
           {r3.map(op => (
             <CalculatorButton
+              key={`calculator__btn-${Object.keys(op)}`}
               val={Object.values(op)[0]}
               onPress={this.updateDisplayHandler}
             />
@@ -89,6 +93,7 @@ export class Calculator extends React.Component {
         <div className="row">
           {r1.map(num => (
             <CalculatorButton
+              key={`calculator__btn-${num}`}
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
@@ -97,6 +102,7 @@ export class Calculator extends React.Component {
         <div className="row justify-content-start">
           {r2.map(num => (
             <CalculatorButton
+              key={`calculator__btn-${num}`}
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
@@ -105,6 +111,7 @@ export class Calculator extends React.Component {
         <div className="row justify-content-start">
           {r3.map(num => (
             <CalculatorButton
+              key={`calculator__btn-${num}`}
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
@@ -113,6 +120,7 @@ export class Calculator extends React.Component {
         <div className="row justify-content-start">
           {r4.map(num => (
             <CalculatorButton
+              key={`calculator__btn-${num}`}
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
@@ -127,7 +135,7 @@ export class Calculator extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <input value={this.state.display} />
+            <input value={this.state.display} readOnly />
           </div>
         </div>
         <div className="row">
