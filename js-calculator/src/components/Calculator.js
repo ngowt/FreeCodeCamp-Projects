@@ -42,7 +42,8 @@ export class Calculator extends React.Component {
       { add: "+" },
       { subtract: "-" },
       { multiply: "*" },
-      { divide: "/" }
+      { divide: "/" },
+      { equal: "=" }
     ];
     const r2 = operations.slice(2, 4);
     const r3 = operations.slice(4, 6);
@@ -51,11 +52,13 @@ export class Calculator extends React.Component {
         <div className="row">
           <CalculatorButton
             key={`calculator__btn-${Object.keys(operations[0])}`}
+            btnStyle="btn-secondary"
             val={operations[0].del}
             onPress={this.deleteHandler}
           />
           <CalculatorButton
             key={`calculator__btn-${Object.keys(operations[1])}`}
+            btnStyle="btn-secondary"
             val={operations[1].ac}
             onPress={this.clearHandler}
           />
@@ -64,6 +67,7 @@ export class Calculator extends React.Component {
           {r2.map(op => (
             <CalculatorButton
               key={`calculator__btn-${Object.keys(op)}`}
+              btnStyle="btn-warning"
               val={Object.values(op)[0]}
               onPress={this.updateDisplayHandler}
             />
@@ -73,10 +77,19 @@ export class Calculator extends React.Component {
           {r3.map(op => (
             <CalculatorButton
               key={`calculator__btn-${Object.keys(op)}`}
+              btnStyle="btn-warning"
               val={Object.values(op)[0]}
               onPress={this.updateDisplayHandler}
             />
           ))}
+        </div>
+        <div className="row">
+          <CalculatorButton
+            key={`calculator__btn-${Object.keys(operations[6])}`}
+            btnStyle="btn-success"
+            val={operations[6].equal}
+            onPress={this.deleteHandler}
+          />
         </div>
       </div>
     );
@@ -94,33 +107,37 @@ export class Calculator extends React.Component {
           {r1.map(num => (
             <CalculatorButton
               key={`calculator__btn-${num}`}
+              btnStyle="btn-primary"
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
           ))}
         </div>
-        <div className="row justify-content-start">
+        <div className="row ">
           {r2.map(num => (
             <CalculatorButton
               key={`calculator__btn-${num}`}
+              btnStyle="btn-primary"
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
           ))}
         </div>
-        <div className="row justify-content-start">
+        <div className="row ">
           {r3.map(num => (
             <CalculatorButton
               key={`calculator__btn-${num}`}
+              btnStyle="btn-primary"
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
           ))}
         </div>
-        <div className="row justify-content-start">
+        <div className="row ">
           {r4.map(num => (
             <CalculatorButton
               key={`calculator__btn-${num}`}
+              btnStyle="btn-primary"
               val={num.toString()}
               onPress={this.updateDisplayHandler}
             />
@@ -134,13 +151,22 @@ export class Calculator extends React.Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <input value={this.state.display} readOnly />
+          <div className="col-5 calculator__display-div">
+            <input
+              type="text"
+              className="form-control"
+              value={this.state.display}
+              readOnly
+            />
           </div>
         </div>
         <div className="row">
-          <div className="col-6">{this.renderNumeralRows()}</div>
-          <div className="col-4">{this.renderOperationRows()}</div>
+          <div className="col-3 calculator__div-col-num">
+            {this.renderNumeralRows()}
+          </div>
+          <div className="col-2 calculator__div-col-op">
+            {this.renderOperationRows()}
+          </div>
         </div>
         {/* <button key="equals">=</button> */}
       </div>
