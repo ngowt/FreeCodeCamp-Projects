@@ -1,7 +1,8 @@
 html,
 body {
     margin: 0px;
-    background: #9DCBBA
+    background: #9DCBBA;
+    font-family: 'Comfortaa', cursive;
 }
 
 .calculator__display-div {
@@ -11,6 +12,7 @@ body {
 
 .calculator__display-input {
     text-align: right;
+    font-size: 30px;
 }
 
 .calculator__div-col-num {
