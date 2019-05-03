@@ -1,4 +1,5 @@
 import React from "react";
+import { CalculatorButton } from "./CalculatorButton";
 
 export class Calculator extends React.Component {
   constructor(props) {
@@ -7,6 +8,32 @@ export class Calculator extends React.Component {
       display: "0"
     };
   }
+
+  clearHandler = () => {
+    this.setState({ display: "0" });
+  };
+
+  deleteHandler = () => {
+    this.state.display.length === 1
+      ? this.setState({ display: "0" })
+      : this.setState({
+          display: this.state.display
+            .slice(0, this.state.display.length - 1)
+            .toString()
+        });
+  };
+
+  updateDisplayHandler = val => {
+    if (this.state.display === "0") {
+      this.setState({
+        display: val
+      });
+    } else {
+      this.setState({
+        display: this.state.display.concat(val)
+      });
+    }
+  };
 
   renderOperationRows = () => {
     const operations = [
@@ -17,25 +44,34 @@ export class Calculator extends React.Component {
       { multiply: "*" },
       { divide: "/" }
     ];
-
-    const r1 = operations.slice(0, 2);
     const r2 = operations.slice(2, 4);
     const r3 = operations.slice(4, 6);
     return (
       <div>
         <div className="row">
-          {r1.map(op => (
-            <button>{Object.values(op)}</button>
-          ))}
+          <CalculatorButton
+            val={operations[0].del}
+            onPress={this.deleteHandler}
+          />
+          <CalculatorButton
+            val={operations[1].ac}
+            onPress={this.clearHandler}
+          />
         </div>
         <div className="row">
           {r2.map(op => (
-            <button>{Object.values(op)}</button>
+            <CalculatorButton
+              val={Object.values(op)[0]}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
         <div className="row">
           {r3.map(op => (
-            <button>{Object.values(op)}</button>
+            <CalculatorButton
+              val={Object.values(op)[0]}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
       </div>
@@ -52,22 +88,34 @@ export class Calculator extends React.Component {
       <div className="d-flex flex-column-reverse">
         <div className="row">
           {r1.map(num => (
-            <button>{num}</button>
+            <CalculatorButton
+              val={num.toString()}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
         <div className="row justify-content-start">
           {r2.map(num => (
-            <button>{num}</button>
+            <CalculatorButton
+              val={num.toString()}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
         <div className="row justify-content-start">
           {r3.map(num => (
-            <button>{num}</button>
+            <CalculatorButton
+              val={num.toString()}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
         <div className="row justify-content-start">
           {r4.map(num => (
-            <button>{num}</button>
+            <CalculatorButton
+              val={num.toString()}
+              onPress={this.updateDisplayHandler}
+            />
           ))}
         </div>
       </div>
