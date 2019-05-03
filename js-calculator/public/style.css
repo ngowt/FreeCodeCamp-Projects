@@ -1,0 +1,27 @@
+.calculator__display-div {
+    margin: 10px auto 10px auto;
+    padding: 0px;
+}
+
+.calculator__div-col-num {
+    margin-left: auto;
+}
+
+.calculator__div-col-op {
+    margin-right: auto;
+}
+
+.calculator__div-num {
+    flex: 1 0 75px;
+    margin: 2px;
+}
+
+.calculator__div-op {
+    flex: 1 0 75px;
+}
+
+.calculator__btn-num {
+    width: 100%;
+    height: 100%;
+}
+
