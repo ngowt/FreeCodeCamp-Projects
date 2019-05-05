@@ -9,6 +9,14 @@ export class Calculator extends React.Component {
     };
   }
 
+  componentDidMount = () => {
+    this.bindKeyListeners();
+  };
+
+  bindKeyListeners = () => {
+    document.addEventListener("keydown", this.keyDownHandler);
+  };
+
   clearHandler = () => {
     this.setState({ display: "0" });
   };
@@ -23,14 +31,77 @@ export class Calculator extends React.Component {
         });
   };
 
+  equalsHandler = () => {
+    this.setState({ display: eval(this.state.display).toString() });
+  };
+
+  keyDownHandler = ({ key }) => {
+    switch (key) {
+      case "1":
+        this.updateDisplayHandler(key);
+        break;
+      case "2":
+        this.updateDisplayHandler(key);
+        break;
+      case "3":
+        this.updateDisplayHandler(key);
+        break;
+      case "4":
+        this.updateDisplayHandler(key);
+        break;
+      case "5":
+        this.updateDisplayHandler(key);
+        break;
+      case "6":
+        this.updateDisplayHandler(key);
+        break;
+      case "7":
+        this.updateDisplayHandler(key);
+        break;
+      case "8":
+        this.updateDisplayHandler(key);
+        break;
+      case "9":
+        this.updateDisplayHandler(key);
+        break;
+      case "0":
+        this.updateDisplayHandler(key);
+        break;
+      case "-":
+        this.updateDisplayHandler(key);
+        break;
+      case "+":
+        this.updateDisplayHandler(key);
+        break;
+      case "*":
+        this.updateDisplayHandler(key);
+        break;
+      case "/":
+        this.updateDisplayHandler(key);
+        break;
+      case "Delete":
+        this.deleteHandler();
+        break;
+      case "Backspace":
+        this.deleteHandler();
+        break;
+      case "Enter":
+        this.equalsHandler();
+        break;
+      case "=":
+        this.equalsHandler();
+        break;
+    }
+  };
+
   updateDisplayHandler = val => {
     if (this.state.display === "0") {
       this.setState({
-        display: val
+        display: val.toString()
       });
     } else {
       this.setState({
-        display: this.state.display.concat(val)
+        display: this.state.display.concat(val.toString())
       });
     }
   };
@@ -88,7 +159,7 @@ export class Calculator extends React.Component {
             key={`calculator__btn-${Object.keys(operations[6])}`}
             btnStyle="btn-success"
             val={operations[6].equal}
-            onPress={this.deleteHandler}
+            onPress={this.equalsHandler}
           />
         </div>
       </div>
@@ -168,7 +239,6 @@ export class Calculator extends React.Component {
             {this.renderOperationRows()}
           </div>
         </div>
-        {/* <button key="equals">=</button> */}
       </div>
     );
   };
