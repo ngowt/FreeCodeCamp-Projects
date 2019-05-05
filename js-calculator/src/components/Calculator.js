@@ -32,7 +32,11 @@ export class Calculator extends React.Component {
   };
 
   equalsHandler = () => {
-    this.setState({ display: eval(this.state.display).toString() });
+    try {
+      this.setState({ display: eval(this.state.display).toString() });
+    } catch (err) {
+      this.setState({ display: "ERROR" });
+    }
   };
 
   keyDownHandler = ({ key }) => {
