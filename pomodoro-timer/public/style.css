@@ -1,0 +1,29 @@
+.watch__div {
+    background-color: red;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    display: grid;
+    grid-auto-rows: 100px;
+}
+
+.watch-timer__div {
+    background-color: blue;
+    display: flex;
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.watch-time__div {
+    background-color: white;
+    border: solid;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p.char {
+    font-size: 64px;
+}

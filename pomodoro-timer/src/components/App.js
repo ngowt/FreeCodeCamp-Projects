@@ -1,5 +1,10 @@
 import React from "react";
+import { Watch } from "./Watch";
 
 export const App = props => {
-  return <div>Pomodoro Clock</div>;
+  return (
+    <div>
+      <Watch />
+    </div>
+  );
 };
